@@ -1,0 +1,8 @@
+
+ A PHP syntax highlighting function (for PHP code), that relies on the PHP tokenizer.
+  
+ Usage:
+ 
+     print highlight($code);
+ 
+;)

@@ -1,0 +1,81 @@
+
+
+/*
+
+  CSS for debug::highlight()
+  
+  Besides tWhitespace (T_WHITESPACE), all other tokenizer identifier names are available as classes.
+  The full list of PPH parser tokens can be found here:
+    http://php.net/manual/en/tokens.php
+*/
+
+
+/* wrapper element */
+pre.code{
+  font-size: 13px;
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+/* links */
+pre.code a{
+	color: inherit;
+	text-decoration: underline;	
+}
+
+/* non-php code */
+.tInlineHtml{
+	color: #aaa;
+}
+
+/* php tags */
+.tOpenTag, .tOpenTagWithEcho, .tCloseTag{
+	font-weight: bold;	
+	color: #000;
+} 	
+
+/* inline or block comments */
+.tComment, .tDocComment{
+	font-style: italic;	
+	color: #bbb;
+}
+
+/* keywords that define a structure, or keywords that include code from other files */
+.tRequireOnce, .tRequire, .tIncludeOnce, .tInclude, .tNamespace, .tUse, .tClass, .tFunction{
+	font-weight: bold;
+	color: #0f58a2;
+}
+
+/* access modifiers or keywords that define the entity type */
+.tVar, .tConst, .tAbstract, .tProtected, .tPrivate, .tPublic, .tStatic, .tFinal, .tExtends, .tImplements, .tGlobal{
+	font-weight: bold;
+	color: #6c9c11;
+}
+
+/* variables */
+.tVariable{
+	color: #c82210;
+}
+
+/* keywords that imply the end of the execution of a code block or script */
+.tReturn, .tThrow, .tExit, .tHaltCompiler{
+	font-weight: bold;
+	color: #c60484;
+}		  
+
+/* numeric values (int or double) */
+.tDnumber, .tLnumber{
+	color: #bf1ca6;
+}
+
+/* string values */
+.tConstantEncapsedString{
+	color: #c78f0a;
+}		
+
+/* funky things */
+.tEval{
+	background: #c82210;
+  color: #fff;		  	
+}
+	  
