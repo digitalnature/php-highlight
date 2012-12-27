@@ -1,8 +1,6 @@
-
-
 /*
 
-  CSS for debug::highlight()
+  CSS for highlight()
   
   Besides tWhitespace (T_WHITESPACE), all other tokenizer identifier names are available as classes.
   The full list of PPH parser tokens can be found here:
@@ -12,9 +10,12 @@
 
 /* wrapper element */
 pre.code{
+  font-family: Menlo, Monaco, "Courier New", monospace;
   font-size: 13px;
   background-color: #f6f6f6;
   color: #333;
+  padding: 5px;
+  text-shadow: #fff 0 1px 0;
 }
 
 /* links */
@@ -36,7 +37,7 @@ pre.code a{
 
 /* inline or block comments */
 .tComment, .tDocComment{
-	font-style: italic;	
+  font-style: italic;	
 	color: #bbb;
 }
 
