@@ -82,7 +82,8 @@ function highlight($code){
       $output .= sprintf('<span class="%s">%s</span>', $class, $text);
 
     
-    }else{exit;
+    // we should never reach this point (!?)
+    }else{
       $output .= $text;
     } 
   }  
