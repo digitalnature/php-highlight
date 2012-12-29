@@ -63,9 +63,8 @@ function highlight($code){
       try{
         $reflector = new \ReflectionFunction($text);
 
-        if($reflector->isInternal()){
+        if($reflector->isInternal())
           $text = sprintf('<a href="http://php.net/manual/en/function.%s.php" target="_blank">%s</a>', str_replace('_', '-', $text), $text);
-        }
       
       }catch(\Exception $e){
         // not an internal function...
@@ -77,7 +76,7 @@ function highlight($code){
     if(($class = array_search($id, $constants)) !== false){
 
       // generate class name (camelize)
-      $class = lcfirst(implode('', array_map('ucwords', explode('_', strtolower($class)))));
+      $class = lcfirst(implode('', array_map('ucwords', explode('_', strtolower($class)))));      
 
       $output .= sprintf('<span class="%s">%s</span>', $class, $text);
 

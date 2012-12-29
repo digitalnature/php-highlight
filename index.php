@@ -3,7 +3,6 @@
 require __DIR__ . '/function.highlight.php';
 
 $code = file_get_contents(__FILE__);
-$code = highlight($code);
 
 // not really required :)
 header('Content-type: text/html');
@@ -13,7 +12,7 @@ header('Content-type: text/html');
 <html>
   <body>
 
-    <?php print $code; ?>
+    <?php print highlight($code); ?>
 
   </body>
 <html>
